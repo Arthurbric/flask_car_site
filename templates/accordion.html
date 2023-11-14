@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Select</title>
+    <link rel="shortcut icon" type="x-icon" href="../static/icon.svg.png">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#accordion" ).accordion();
+} );
+</script>
+    <style>
+    h3{
+        font-size: 40px;
+    }
+
+        .ui-accordion{
+            text-align: center;
+        }
+        div{
+
+        background: linear-gradient(to right, #faf3dd, #aed9e0);
+        align-items: center;
+        }
+body {
+    background: url(../static/cars.jpg);
+    background-size: cover;
+}
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    padding-right: 45px;
+    padding-left: 45px;
+}
+table{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    background: linear-gradient(to right, #cbf3f0, #ffbf69);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+     border-radius: 20px;
+    font-size: 20px;
+
+}
+a{
+    display: grid;
+  place-items: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    color: #ffba49;
+    text-decoration: underline ;
+    background: radial-gradient( #a8dadc,#f1faee);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+     border-radius: 20px;
+}
+a:hover{
+     color: #fdfffc;
+     font-size: 70px;
+    background: radial-gradient( #ff9f1c,#2ec4b6);
+}
+
+
+    </style>
+</head>
+<body>
+
+<div id="accordion">
+{{ dados | safe }}
+</div>
+
+<br><br>
+
+<a href = "/go">Retornar ao Menu</a>
+</body>
+</html>

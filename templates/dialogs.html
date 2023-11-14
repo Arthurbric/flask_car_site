@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Dialogo</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+ $( "input" ).checkboxradio();
+ $( ".dialogo" ).dialog({
+   width: 350,
+   autoOpen: false,
+   show: {
+     effect: "blind",
+     duration: 1000
+   },
+   hide: {
+     effect: "explode",
+     duration: 1000
+   }
+ });
+} );
+
+</script>
+</head>
+<body>
+<div class="widget">
+<h1>Lista de Veículos</h1>
+
+<h2>Clique no veículo para saber detalhes</h2>
+
+<fieldset>
+ <legend>Qual o veículo?</legend>
+ {{ rads | safe}}
+</fieldset>
+
+{{ dlgs | safe }}
+
+</div>
+
+
+<br><br>
+
+[ <a href = "/">Retornar ao Menu</a> ]
+
+</body>
+</html>
